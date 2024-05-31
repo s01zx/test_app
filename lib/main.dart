@@ -18,7 +18,8 @@ class MyApp extends StatelessWidget {
       builder: (BuildContext context, BoxConstraints constraints) {
         return OrientationBuilder(
           builder: (context, orientation) {
-            SizeConfig().init(constraints, orientation); //ensures screen
+            SizeConfig().init(constraints,
+                orientation); //ensures screen responsiveness and sizing
             return MaterialApp(
               title: 'Flutter Demo',
               theme: ThemeData(
@@ -44,6 +45,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  //demo list for bottom nav items
   List<RadioModel> bottomitems = [
     RadioModel(name: "Home", intval: 0, isselected: true, icon: Icons.add),
     RadioModel(name: "Favorite", intval: 1, isselected: false, icon: Icons.abc),
